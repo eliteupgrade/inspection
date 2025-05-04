@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بطاقة معاينة واستلام - Elite Upgrade</title>
+  <!-- Favicon set to the top left logo -->
+  <link rel="icon" href="https://i.ibb.co/XxYkvv8K/Elite-Logos-pages-to-jpg-0001.jpg">
+  <!-- Google Fonts: Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Use Tajawal for the entire document */
+    body {
+      font-family: 'Tajawal', sans-serif;
+      direction: rtl;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    /* A4 page style with reduced margins */
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+    /* Main container set to A4 dimensions */
+    .container {
+      width: 210mm;
+      height: 297mm;
+      margin: auto;
+      background-color: #fff;
+      padding: 10mm;
+      box-sizing: border-box;
+      font-size: 10px;
+      overflow: hidden;
+    }
+    /* Header styles */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .logo {
+      text-align: left;
+    }
+    .logo img {
+      max-width: 60px;
+    }
+    /* Brand logos container */
+    .brand-logos {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    .brand-logo {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      padding: 2px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16px;
+      margin: 5px 0 10px;
+    }
+    .form-section {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      background-color: #fafafa;
+    }
+    .form-section h2 {
+      margin-top: 0;
+      background-color: #eee;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    /* Flex row for inline grouping */
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+    .form-field {
+      flex: 1;
+      min-width: 80px;
+    }
+    .form-field label {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: bold;
+      font-size: 10px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 3px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 10px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+      font-size: 10px;
+    }
+    table, th, td { 
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 3px;
+      text-align: center;
+    }
+    .color-options label {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+    .color-swatch {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 3px;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+    }
+    .print-button {
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      display: block;
+      font-size: 10px;
+      margin: 5px auto;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    /* Interactive Car Diagram Container */
+    .car-diagram-container {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .car-diagram {
+      cursor: pointer; /* indicate interactivity */
+      max-width: 100%;
+    }
+    @media print {
+      .print-button {
+        display: none;
+      }
+      body {
+        background-color: #fff;
+      }
+      .container {
+        box-shadow: none;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo and car brands -->
+    <div class="header">
+      <div class="logo">
+        <img src="https://i.ibb.co/XxYkvv8K/Elite-Logos-pages-to-jpg-0001.jpg" alt="Elite Upgrade Logo">
+      </div>
+      <div class="brand-logos">
+        <span class="brand-logo">
+          <a href="https://imgbb.com/">
+            <img src="https://i.ibb.co/DPv8QDst/images.jpg" alt="images">
+          </a>
+        </span>
+        <span class="brand-logo">
+          <a href="https://imgbb.com/">
+            <img src="https://i.ibb.co/GhkHDS1/Jeep.jpg" alt="Jeep">
+          </a>
+        </span>
+        <span class="brand-logo">
+          <a href="https://imgbb.com/">
+            <img src="https://i.ibb.co/B5XyH58L/jetour-logo-png-seeklogo-524224.png" alt="Jetour">
+          </a>
+        </span>
+        <span class="brand-logo">
+          <a href="https://ibb.co/DfZxDzWK">
+            <img src="https://i.ibb.co/r2VCGF0y/lexus-logo.png" alt="Lexus">
+          </a>
+        </span>
+        <span class="brand-logo">
+          <a href="https://ibb.co/jkYf0R4p">
+            <img src="https://i.ibb.co/k2TBb1cd/Mercedes-Logo-svg.png" alt="Mercedes-Benz">
+          </a>
+        </span>
+        <span class="brand-logo">
+          <a href="https://ibb.co/4gnVV53R">
+            <img src="https://i.ibb.co/3Y9CCLQm/toyota-logo.jpg" alt="Toyota">
+          </a>
+        </span>
+      </div>
+    </div>
+
+    <h1>بطاقة معاينة واستلام</h1>
+    
+    <form action="#" method="post">
+      <!-- Customer Information Section -->
+      <div class="form-section">
+        <h2>معلومات العميل</h2>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="customer-name">اسم العميل:</label>
+            <input type="text" id="customer-name" name="customer-name">
+          </div>
+          <div class="form-field">
+            <label for="customer-phone">رقم هاتف العميل:</label>
+            <input type="tel" id="customer-phone" name="customer-phone"
+                   placeholder="+9627900000" pattern="^\+962\d{9}$">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="customer-source">مصدر العميل:</label>
+            <select id="customer-source" name="customer-source">
+              <option value="">-- اختر المصدر --</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Referals">Referals</option>
+              <option value="عالم السيارات">عالم السيارات</option>
+              <option value="Walk In">Walk In</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vehicle Information Section -->
+      <div class="form-section">
+        <h2>معلومات المركبة</h2>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="plate-number">رقم اللوحة:</label>
+            <input type="text" id="plate-number" name="plate-number"
+                   placeholder="00-00000" pattern="[0-9]{2}-[0-9]{5}">
+          </div>
+          <div class="form-field">
+            <label for="chassis-number">رقم الشاصي:</label>
+            <input type="text" id="chassis-number" name="chassis-number">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="vehicle-type">نوع المركبة:</label>
+            <select id="vehicle-type" name="vehicle-type">
+              <option value="">-- اختر نوع المركبة --</option>
+              <option value="Land Cruiser">Land Cruiser</option>
+              <option value="Audi Q5">Audi Q5</option>
+              <option value="Hyundai Sonata">Hyundai Sonata</option>
+              <option value="Jeep Cherokee">Jeep Cherokee</option>
+              <option value="Mercedes Benz EQE">Mercedes Benz EQE</option>
+              <option value="Azera">Azera</option>
+              <option value="Mercedes Benz GLS">Mercedes Benz GLS</option>
+              <option value="BMW X6">BMW X6</option>
+              <option value="Land Rover Defender">Land Rover Defender</option>
+              <option value="Mercedes Benz E class">Mercedes Benz E class</option>
+              <option value="Mercedes Benz G class">Mercedes Benz G class</option>
+              <option value="BMW 5 Series G30">BMW 5 Series G30</option>
+              <option value="Mazda 6">Mazda 6</option>
+              <option value="Toyota Camery">Toyota Camery</option>
+              <option value="Mitsubishi Pajero">Mitsubishi Pajero</option>
+              <option value="BMW G20">BMW G20</option>
+              <option value="Ford Expedition">Ford Expedition</option>
+              <option value="Chevrolet Taho">Chevrolet Taho</option>
+              <option value="Ford Fusion">Ford Fusion</option>
+              <option value="Lexus 570">Lexus 570</option>
+              <option value="Porsche Taycan">Porsche Taycan</option>
+              <option value="Range Rover Vouge">Range Rover Vouge</option>
+              <option value="Mercedes Benz ML">Mercedes Benz ML</option>
+              <option value="Dodge RAM">Dodge RAM</option>
+              <option value="Cadillac Escalade">Cadillac Escalade</option>
+              <option value="Mercedes-Benz GLC">Mercedes-Benz GLC</option>
+              <option value="BYD TANG">BYD TANG</option>
+              <option value="GMC SERRIA">GMC SERRIA</option>
+              <option value="BYD Song plus">BYD Song plus</option>
+              <option value="BMW - E 90">BMW - E 90</option>
+              <option value="BMW i3">BMW i3</option>
+              <option value="Tesla Model Y">Tesla Model Y</option>
+              <option value="VW ID 6 PRO">VW ID 6 PRO</option>
+              <option value="Nissan Patrol">Nissan Patrol</option>
+              <option value="Changan SL03">Changan SL03</option>
+              <option value="BYD Song L">BYD Song L</option>
+              <option value="Range Rover Sport">Range Rover Sport</option>
+              <option value="BYD Yuan plus">BYD Yuan plus</option>
+              <option value="HAVAL H6">HAVAL H6</option>
+              <option value="JETOUR T2">JETOUR T2</option>
+              <option value="Toyota BZ 4X">Toyota BZ 4X</option>
+              <option value="Toyota RAV4">Toyota RAV4</option>
+              <option value="BYD Han">BYD Han</option>
+              <option value="Hongqi E-HS9">Hongqi E-HS9</option>
+              <option value="Ford F-150® Raptor">Ford F-150® Raptor</option>
+              <option value="BMW 735i">BMW 735i</option>
+              <option value="Mercedes Benz EQS">Mercedes Benz EQS</option>
+              <option value="Tesla Model X">Tesla Model X</option>
+              <option value="KIA Certao">KIA Certao</option>
+              <option value="Mercedes-Benz CLS">Mercedes-Benz CLS</option>
+              <option value="Mercedes Benz C class">Mercedes Benz C class</option>
+              <option value="BMW X5 F15">BMW X5 F15</option>
+              <option value="Jeep Wrangler">Jeep Wrangler</option>
+              <option value="Land Rover Discovery LR3">Land Rover "Discovery" LR3</option>
+              <option value="Ford Mustang">Ford Mustang</option>
+              <option value="Porsche Macan">Porsche Macan</option>
+              <option value="Ford Bronco® SUV">Ford Bronco® SUV</option>
+              <option value="Changan E-Star">Changan E-Star</option>
+              <option value="BMW X5 (E53)">BMW X5 (E53)</option>
+              <option value="ID 4 Pro">ID 4 Pro</option>
+              <option value="GMC Yukon">GMC Yukon</option>
+              <option value="BMW X4">BMW X4</option>
+              <option value="Nissan Pathfinder">Nissan Pathfinder</option>
+              <option value="Prado">Prado</option>
+              <option value="LEXUS">LEXUS</option>
+              <option value="Toyota Hilux">Toyota Hilux</option>
+              <option value="Toyota Corolla Cross">Toyota Corolla Cross</option>
+              <option value="Porsche 997">Porsche 997</option>
+              <option value="Porsche Panamera">Porsche Panamera</option>
+              <option value="FX350">FX350</option>
+              <option value="NETA U">NETA U</option>
+              <option value="BMW 7 G12">BMW 7 G12</option>
+              <option value="Chrysler 300">Chrysler 300</option>
+              <option value="Toyota Highlander">Toyota Highlander</option>
+              <option value="Range Rover Evoque">Range Rover Evoque</option>
+              <option value="BMW X5 G05">BMW X5 G05</option>
+              <option value="Rox 01">Rox 01</option>
+              <option value="Tesla Model 3">Tesla Model 3</option>
+              <option value="Isuzu D-Max">Isuzu D-Max</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>لون المركبة:</label>
+            <div class="color-options">
+              <label>
+                <input type="radio" name="car-color" value="red">
+                <span class="color-swatch" style="background: red;"></span>أحمر
+              </label>
+              <label>
+                <input type="radio" name="car-color" value="blue">
+                <span class="color-swatch" style="background: blue;"></span>أزرق
+              </label>
+              <label>
+                <input type="radio" name="car-color" value="black">
+                <span class="color-swatch" style="background: black;"></span>أسود
+              </label>
+              <label>
+                <input type="radio" name="car-color" value="white">
+                <span class="color-swatch" style="background: white; border: 1px solid #ccc;"></span>أبيض
+              </label>
+              <label>
+                <input type="radio" name="car-color" value="silver">
+                <span class="color-swatch" style="background: silver;"></span>فضي
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Delivery Section -->
+      <div class="form-section">
+        <h2>قسم التسليم</h2>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="receipt-datetime">تاريخ ووقت الاستلام:</label>
+            <input type="datetime-local" id="receipt-datetime" name="receipt-datetime">
+          </div>
+          <div class="form-field">
+            <label for="delivery-datetime">تاريخ ووقت التسليم:</label>
+            <input type="datetime-local" id="delivery-datetime" name="delivery-datetime">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="receiver-person">الشخص المستلم:</label>
+            <input type="text" id="receiver-person" name="receiver-person">
+          </div>
+          <div class="form-field">
+            <label for="receiver-employee">الموظف المستلم:</label>
+            <input type="text" id="receiver-employee" name="receiver-employee">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Parts/Services Table -->
+      <div class="form-section">
+        <h2>القطع / الخدمات المطلوبة</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>الرقم التسلسلي</th>
+              <th>القطع التي بحاجة لتبديل</th>
+              <th>الخدمات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><input type="text" name="part1"></td>
+              <td><input type="text" name="service1"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input type="text" name="part2"></td>
+              <td><input type="text" name="service2"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><input type="text" name="part3"></td>
+              <td><input type="text" name="service3"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Additional Notes Section -->
+      <div class="form-section">
+        <h2>ملاحظات إضافية</h2>
+        <div class="form-row">
+          <div class="form-field" style="flex: 1;">
+            <textarea id="notes" name="notes" rows="2" placeholder="اكتب أي ملاحظات هنا..."></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+    
+    <!-- Interactive Car Diagram Section -->
+    <div class="car-diagram-container">
+      <h2>رسم السيارة التفاعلي</h2>
+      <svg class="car-diagram" id="carDiagram" width="400" height="200" viewBox="0 0 400 200">
+        <!-- Car Body Base -->
+        <rect x="50" y="80" width="300" height="60" fill="#ccc" stroke="#000" stroke-width="1"/>
+        <!-- Hood (Clickable) -->
+        <polygon id="hood"
+                 class="clickable"
+                 data-original="#aaa" 
+                 data-highlight="#f00" 
+                 points="50,80 100,50 150,80" 
+                 fill="#aaa" stroke="#000" stroke-width="1"/>
+        <!-- Door (Clickable) -->
+        <rect id="door"
+              class="clickable"
+              data-original="#bbb"
+              data-highlight="#0a0"
+              x="150" y="80" width="120" height="60" 
+              fill="#bbb" stroke="#000" stroke-width="1"/>
+        <!-- Trunk (Clickable) -->
+        <polygon id="trunk"
+                 class="clickable"
+                 data-original="#ddd" 
+                 data-highlight="#00f"
+                 points="270,80 350,80 370,100 350,120 270,120"
+                 fill="#ddd" stroke="#000" stroke-width="1"/>
+      </svg>
+      <p style="font-size: 10px;">انقر على أي جزء من السيارة (الغطاء الأمامي، الباب، أو الصندوق) لتغيير لونه.</p>
+    </div>
+    
+  </div>
+  
+  <!-- Print Button -->
+  <button class="print-button" onclick="window.print();">طباعة النموذج</button>
+  
+  <!-- Script to populate موديل المركبة (سنة الصنع) dropdown with years from 1950 to 2025 -->
+  <script>
+    // Populate years for the model dropdown
+    const yearSelect = document.getElementById('model');
+    for (let year = 1950; year <= 2025; year++) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      yearSelect.appendChild(option);
+    }
+    
+    // Add click event listeners to the clickable parts in the car diagram
+    document.querySelectorAll('.clickable').forEach(function(elem) {
+      elem.style.cursor = "pointer";
+      elem.addEventListener('click', function() {
+        const original = elem.getAttribute('data-original');
+        const highlight = elem.getAttribute('data-highlight');
+        const currentFill = elem.getAttribute('fill');
+        // Toggle fill color between original and highlight color
+        if (currentFill === original) {
+          elem.setAttribute('fill', highlight);
+        } else {
+          elem.setAttribute('fill', original);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
